@@ -17,6 +17,7 @@ namespace EzPay
     {
         SqlConnection con;
         EzPaycontext dbcontext;
+        int userId;
         //public UserForm()
         //{
         //    InitializeComponent();
@@ -26,6 +27,7 @@ namespace EzPay
         public UserForm(int id, string name, string Email, string Phone, string password, decimal Balance)
         {
             InitializeComponent();
+            userId = id;
             con = new SqlConnection("Server=desktop-gtd3iip\\sqlexpress;Database=EzPay;Trusted_Connection=True;TrustServerCertificate=True");
             Hello(id, name, Balance);
             dbcontext = new EzPaycontext();
@@ -40,6 +42,13 @@ namespace EzPay
         {
             lb_username.Text = $"Hello, {name}";
             lb_balance.Text = $"$ {Balance}";
+            Checkcard(id);
+
+
+
+        }
+        public void Checkcard(int id) {
+
             try
             {
                 var query = $"SELECT CardHolderName, CardNumber, ExpiryDate FROM Payments WHERE UserId = @UserId";
@@ -63,7 +72,6 @@ namespace EzPay
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
-
         }
         public string FormatCardNumber(string cardNumber)
         {
@@ -91,8 +99,9 @@ namespace EzPay
 
         private void btn_addcreditcard_Click(object sender, EventArgs e)
         {
-            AddCreditCard addCreditCard = new AddCreditCard();
+            AddCreditCard addCreditCard = new AddCreditCard(userId,this);
             addCreditCard.Show();
+
 
         }
     }

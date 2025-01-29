@@ -14,13 +14,12 @@ namespace EzPay.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long CardNumber { get; set; }
-        [StringLength(100)]
-        public string BankName { get; set; }
-    
         public int Cvv { get; set; }
         [Column(TypeName = "date")]
         public DateTime ExpiryDate { get; set; }
         public string CardHolderName { get; set; }
+        public decimal Balance { get; set; }
+
         public int UserId { get; set; }
         public virtual User User { get; set; }
 

@@ -25,6 +25,9 @@ namespace EzPay.Models
             modelBuilder.Entity<User>()
                 .Property(b => b.Balance)
                 .HasDefaultValueSql("0");
+            modelBuilder.Entity<Payment>()
+              .Property(P => P.Balance)
+              .HasDefaultValueSql("0");
         }
     }
 }
