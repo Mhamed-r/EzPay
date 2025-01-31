@@ -30,9 +30,7 @@ namespace EzPay.Models
 
         [StringLength(20)]
         public string? Phone { get; set; }
-        [Column(TypeName = "money")]
-
-        public decimal? Balance { get; set; }
+        public decimal Balance { get; set; }
 
         public DateTime Date { get; set; }
 

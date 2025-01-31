@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
@@ -37,36 +37,33 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             dgv_recenttransactions = new Guna.UI2.WinForms.Guna2DataGridView();
             btn_viewallhistory = new Guna.UI2.WinForms.Guna2GradientButton();
             label8 = new Label();
             guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             label7 = new Label();
-            label6 = new Label();
             label5 = new Label();
             guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
-            guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            btn_deposit = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             lb_balance = new Label();
             btn_logout = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -99,14 +96,14 @@
             guna2CustomGradientPanel1.Controls.Add(guna2CustomGradientPanel3);
             guna2CustomGradientPanel1.Controls.Add(guna2CustomGradientPanel2);
             guna2CustomGradientPanel1.Controls.Add(guna2GradientPanel1);
-            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges22;
+            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges21;
             guna2CustomGradientPanel1.FillColor = Color.FromArgb(198, 227, 137);
             guna2CustomGradientPanel1.FillColor2 = Color.FromArgb(61, 162, 166);
             guna2CustomGradientPanel1.FillColor3 = Color.FromArgb(198, 227, 137);
             guna2CustomGradientPanel1.FillColor4 = Color.FromArgb(61, 162, 166);
             guna2CustomGradientPanel1.Location = new Point(0, 0);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges23;
+            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges22;
             guna2CustomGradientPanel1.Size = new Size(723, 878);
             guna2CustomGradientPanel1.TabIndex = 0;
             // 
@@ -216,67 +213,38 @@
             guna2CustomGradientPanel3.BackColor = Color.Transparent;
             guna2CustomGradientPanel3.BorderColor = Color.White;
             guna2CustomGradientPanel3.BorderRadius = 25;
-            guna2CustomGradientPanel3.Controls.Add(guna2ImageButton2);
             guna2CustomGradientPanel3.Controls.Add(label7);
-            guna2CustomGradientPanel3.Controls.Add(label6);
             guna2CustomGradientPanel3.Controls.Add(label5);
             guna2CustomGradientPanel3.Controls.Add(guna2ImageButton3);
-            guna2CustomGradientPanel3.Controls.Add(guna2ImageButton1);
-            guna2CustomGradientPanel3.CustomizableEdges = customizableEdges8;
-            guna2CustomGradientPanel3.Location = new Point(117, 410);
+            guna2CustomGradientPanel3.Controls.Add(btn_deposit);
+            guna2CustomGradientPanel3.CustomizableEdges = customizableEdges7;
+            guna2CustomGradientPanel3.Location = new Point(180, 410);
             guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
-            guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            guna2CustomGradientPanel3.Size = new Size(477, 106);
+            guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2CustomGradientPanel3.Size = new Size(351, 106);
             guna2CustomGradientPanel3.TabIndex = 15;
-            // 
-            // guna2ImageButton2
-            // 
-            guna2ImageButton2.BackColor = Color.Transparent;
-            guna2ImageButton2.CheckedState.ImageSize = new Size(64, 64);
-            guna2ImageButton2.Cursor = Cursors.Hand;
-            guna2ImageButton2.HoverState.ImageSize = new Size(64, 64);
-            guna2ImageButton2.Image = (Image)resources.GetObject("guna2ImageButton2.Image");
-            guna2ImageButton2.ImageOffset = new Point(0, 0);
-            guna2ImageButton2.ImageRotate = 0F;
-            guna2ImageButton2.Location = new Point(183, 3);
-            guna2ImageButton2.Name = "guna2ImageButton2";
-            guna2ImageButton2.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton2.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            guna2ImageButton2.Size = new Size(101, 72);
-            guna2ImageButton2.TabIndex = 11;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Microsoft JhengHei UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(339, 70);
+            label7.Location = new Point(214, 70);
             label7.Name = "label7";
             label7.Size = new Size(79, 22);
             label7.TabIndex = 18;
             label7.Text = "Transfer";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.Transparent;
-            label6.Font = new Font("Microsoft JhengHei UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(187, 70);
-            label6.Name = "label6";
-            label6.Size = new Size(93, 22);
-            label6.TabIndex = 17;
-            label6.Text = "Withdraw";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Microsoft JhengHei UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(46, 70);
+            label5.Location = new Point(36, 72);
             label5.Name = "label5";
-            label5.Size = new Size(75, 22);
+            label5.Size = new Size(106, 22);
             label5.TabIndex = 16;
-            label5.Text = "Deposit";
+            label5.Text = "Add Money";
             // 
             // guna2ImageButton3
             // 
@@ -287,28 +255,29 @@
             guna2ImageButton3.Image = (Image)resources.GetObject("guna2ImageButton3.Image");
             guna2ImageButton3.ImageOffset = new Point(0, 0);
             guna2ImageButton3.ImageRotate = 0F;
-            guna2ImageButton3.Location = new Point(332, 4);
+            guna2ImageButton3.Location = new Point(207, 4);
             guna2ImageButton3.Name = "guna2ImageButton3";
             guna2ImageButton3.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton3.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2ImageButton3.ShadowDecoration.CustomizableEdges = customizableEdges5;
             guna2ImageButton3.Size = new Size(101, 72);
             guna2ImageButton3.TabIndex = 12;
             // 
-            // guna2ImageButton1
+            // btn_deposit
             // 
-            guna2ImageButton1.BackColor = Color.Transparent;
-            guna2ImageButton1.CheckedState.ImageSize = new Size(64, 64);
-            guna2ImageButton1.Cursor = Cursors.Hand;
-            guna2ImageButton1.HoverState.ImageSize = new Size(64, 64);
-            guna2ImageButton1.Image = (Image)resources.GetObject("guna2ImageButton1.Image");
-            guna2ImageButton1.ImageOffset = new Point(0, 0);
-            guna2ImageButton1.ImageRotate = 0F;
-            guna2ImageButton1.Location = new Point(34, 2);
-            guna2ImageButton1.Name = "guna2ImageButton1";
-            guna2ImageButton1.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton1.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            guna2ImageButton1.Size = new Size(101, 72);
-            guna2ImageButton1.TabIndex = 10;
+            btn_deposit.BackColor = Color.Transparent;
+            btn_deposit.CheckedState.ImageSize = new Size(64, 64);
+            btn_deposit.Cursor = Cursors.Hand;
+            btn_deposit.HoverState.ImageSize = new Size(64, 64);
+            btn_deposit.Image = (Image)resources.GetObject("btn_deposit.Image");
+            btn_deposit.ImageOffset = new Point(0, 0);
+            btn_deposit.ImageRotate = 0F;
+            btn_deposit.Location = new Point(39, 4);
+            btn_deposit.Name = "btn_deposit";
+            btn_deposit.PressedState.ImageSize = new Size(64, 64);
+            btn_deposit.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btn_deposit.Size = new Size(101, 72);
+            btn_deposit.TabIndex = 10;
+            btn_deposit.Click += btn_deposit_Click;
             // 
             // guna2CustomGradientPanel2
             // 
@@ -321,10 +290,10 @@
             guna2CustomGradientPanel2.Controls.Add(guna2CirclePictureBox1);
             guna2CustomGradientPanel2.Controls.Add(lb_username);
             guna2CustomGradientPanel2.Controls.Add(label2);
-            guna2CustomGradientPanel2.CustomizableEdges = customizableEdges13;
+            guna2CustomGradientPanel2.CustomizableEdges = customizableEdges12;
             guna2CustomGradientPanel2.Location = new Point(86, 16);
             guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges13;
             guna2CustomGradientPanel2.Size = new Size(538, 123);
             guna2CustomGradientPanel2.TabIndex = 13;
             // 
@@ -350,7 +319,7 @@
             btn_logout.Location = new Point(468, 25);
             btn_logout.Name = "btn_logout";
             btn_logout.PressedState.ImageSize = new Size(64, 64);
-            btn_logout.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btn_logout.ShadowDecoration.CustomizableEdges = customizableEdges9;
             btn_logout.Size = new Size(58, 60);
             btn_logout.TabIndex = 9;
             btn_logout.Click += btn_logout_Click;
@@ -367,7 +336,7 @@
             btn_setting.Location = new Point(401, 25);
             btn_setting.Name = "btn_setting";
             btn_setting.PressedState.ImageSize = new Size(64, 64);
-            btn_setting.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            btn_setting.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btn_setting.Size = new Size(55, 56);
             btn_setting.TabIndex = 8;
             // 
@@ -378,7 +347,7 @@
             guna2CirclePictureBox1.ImageRotate = 0F;
             guna2CirclePictureBox1.Location = new Point(22, 35);
             guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges11;
             guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CirclePictureBox1.Size = new Size(68, 65);
             guna2CirclePictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -416,12 +385,12 @@
             guna2GradientPanel1.Controls.Add(guna2PictureBox2);
             guna2GradientPanel1.Controls.Add(guna2PictureBox1);
             guna2GradientPanel1.Controls.Add(lb_cardholdername);
-            guna2GradientPanel1.CustomizableEdges = customizableEdges20;
+            guna2GradientPanel1.CustomizableEdges = customizableEdges19;
             guna2GradientPanel1.FillColor = Color.Black;
             guna2GradientPanel1.FillColor2 = Color.White;
             guna2GradientPanel1.Location = new Point(127, 160);
             guna2GradientPanel1.Name = "guna2GradientPanel1";
-            guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges21;
+            guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges20;
             guna2GradientPanel1.Size = new Size(456, 228);
             guna2GradientPanel1.TabIndex = 14;
             // 
@@ -437,7 +406,7 @@
             btn_addcreditcard.Location = new Point(173, 55);
             btn_addcreditcard.Name = "btn_addcreditcard";
             btn_addcreditcard.PressedState.ImageSize = new Size(64, 64);
-            btn_addcreditcard.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            btn_addcreditcard.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btn_addcreditcard.Size = new Size(118, 93);
             btn_addcreditcard.TabIndex = 10;
             btn_addcreditcard.Visible = false;
@@ -469,12 +438,12 @@
             // guna2PictureBox2
             // 
             guna2PictureBox2.BackColor = Color.Transparent;
-            guna2PictureBox2.CustomizableEdges = customizableEdges16;
+            guna2PictureBox2.CustomizableEdges = customizableEdges15;
             guna2PictureBox2.Image = (Image)resources.GetObject("guna2PictureBox2.Image");
             guna2PictureBox2.ImageRotate = 0F;
             guna2PictureBox2.Location = new Point(25, 91);
             guna2PictureBox2.Name = "guna2PictureBox2";
-            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna2PictureBox2.Size = new Size(102, 57);
             guna2PictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             guna2PictureBox2.TabIndex = 12;
@@ -483,12 +452,12 @@
             // guna2PictureBox1
             // 
             guna2PictureBox1.BackColor = Color.Transparent;
-            guna2PictureBox1.CustomizableEdges = customizableEdges18;
+            guna2PictureBox1.CustomizableEdges = customizableEdges17;
             guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(351, 26);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges18;
             guna2PictureBox1.Size = new Size(102, 57);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             guna2PictureBox1.TabIndex = 11;
@@ -551,11 +520,9 @@
         private Label lb_expdate;
         private Label lb_cardnumber;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_deposit;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
         private Label label7;
-        private Label label6;
         private Label label5;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
         private Label label8;

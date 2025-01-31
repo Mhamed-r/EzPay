@@ -104,12 +104,7 @@ namespace EzPay
             cb_code.SelectedValue = 20;
 
         }
-        public static class Email_Regex
-        {
-            public static readonly Regex EmailRegx = new Regex(@"^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$");
-
-
-        }
+      
         private void cb_show_CheckedChanged(object sender, EventArgs e)
         {
             if (cb_show_CheckedChanged != null)
@@ -143,7 +138,7 @@ namespace EzPay
             {
                 MessageBox.Show("Phone number must be at least 10 numbers");
             }
-            else if (Email_Regex.EmailRegx.IsMatch(txt_email.Text) == false)
+            else if (Regex.IsMatch(txt_email.Text, @"^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$")==false)
             {
                 MessageBox.Show("Invalid Email Address");
 
@@ -155,21 +150,22 @@ namespace EzPay
             }
             else
             {
-                try { 
-
-                User user = new User
+                try
                 {
-                    Name = txt_username.Text,
-                    Email = txt_email.Text,
-                    Phone = cb_code.SelectedValue + txt_phone.Text,
-                    Password = txt_password.Text,
-                    Date = DateTime.Now,
-                    Role = "User",
-                };
-                dbcontext.Users.Add(user);
-                dbcontext.SaveChanges();
-                MessageBox.Show($"User {txt_username.Text} Registered Successfully");
-                btn_clear_Click(null, null);
+
+                    User user = new User
+                    {
+                        Name = txt_username.Text,
+                        Email = txt_email.Text,
+                        Phone = cb_code.SelectedValue + txt_phone.Text,
+                        Password = txt_password.Text,
+                        Date = DateTime.Now,
+                        Role = "User",
+                    };
+                    dbcontext.Users.Add(user);
+                    dbcontext.SaveChanges();
+                    MessageBox.Show($"User {txt_username.Text} Registered Successfully");
+                    btn_clear_Click(null, null);
                 }
                 catch (Exception ex)
                 {

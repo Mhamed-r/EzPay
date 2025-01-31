@@ -314,7 +314,7 @@
             guna2CustomGradientPanel2.Location = new Point(0, -1);
             guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2CustomGradientPanel2.Size = new Size(588, 492);
+            guna2CustomGradientPanel2.Size = new Size(590, 492);
             guna2CustomGradientPanel2.TabIndex = 14;
             // 
             // AddCreditCard

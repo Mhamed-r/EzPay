@@ -18,12 +18,6 @@ namespace EzPay
         SqlConnection con;
         EzPaycontext dbcontext;
         int userId;
-        //public UserForm()
-        //{
-        //    InitializeComponent();
-
-
-        //}
         public UserForm(int id, string name, string Email, string Phone, string password, decimal Balance)
         {
             InitializeComponent();
@@ -41,13 +35,28 @@ namespace EzPay
         public void Hello(int id, string name, decimal Balance)
         {
             lb_username.Text = $"Hello, {name}";
-            lb_balance.Text = $"$ {Balance}";
+            CheckBalance(id);
             Checkcard(id);
 
-
-
         }
-        public void Checkcard(int id) {
+        public void CheckBalance(int id)
+        {
+            try
+            {
+                var query = $"SELECT Balance FROM Users WHERE UserId = @UserId";
+                User selectUser = con.Query<User>(query, new { UserId = id }).FirstOrDefault();
+                if (selectUser != null)
+                {
+                    lb_balance.Text = selectUser.Balance.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+        }
+        public void Checkcard(int id)
+        {
 
             try
             {
@@ -75,16 +84,32 @@ namespace EzPay
         }
         public string FormatCardNumber(string cardNumber)
         {
-            var formattedNumber = new StringBuilder();
-
+            StringBuilder formattedNumber = new StringBuilder();
             for (int i = 0; i < cardNumber.Length; i++)
             {
-                if (i > 0 && i % 4 == 0)
+                if (i <= cardNumber.Length - 6)
                 {
-                    formattedNumber.Append(' ');
+                    formattedNumber.Append('*');
+                    if (i > 0 && i % 4 == 0)
+                    {
+                        formattedNumber.Append(' ');
+                    }
                 }
-                formattedNumber.Append(cardNumber[i]);
+                else
+                {
+                    formattedNumber.Append(cardNumber[i]);
+                }
             }
+            //for (int i = 0; i < cardNumber.Length; i++)
+            //{
+            //    if (i > 0 && i % 4 == 0)
+            //    {
+            //        formattedNumber.Append(' ');
+            //    }
+            //    formattedNumber.Append(cardNumber[i]);
+            //}
+
+
 
             return formattedNumber.ToString();
         }
@@ -99,10 +124,16 @@ namespace EzPay
 
         private void btn_addcreditcard_Click(object sender, EventArgs e)
         {
-            AddCreditCard addCreditCard = new AddCreditCard(userId,this);
+            AddCreditCard addCreditCard = new AddCreditCard(userId, this);
             addCreditCard.Show();
 
 
+        }
+
+        private void btn_deposit_Click(object sender, EventArgs e)
+        {
+            Deposit deposit = new Deposit(userId, this);
+            deposit.Show();
         }
     }
 }
