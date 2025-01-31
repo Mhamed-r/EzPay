@@ -37,7 +37,7 @@ namespace EzPay
             foreach (var item in Load_Payments)
             {
                 RadioButton radioButton= new RadioButton();
-                radioButton.Text = $"Linked Card {FormatCardNumber(item.CardNumber.ToString())}";
+                radioButton.Text = $"Linked Card {userForm.FormatCardNumber(item.CardNumber.ToString())}";
                 radioButton.Tag = item.CardNumber;
                 radioButton.AutoSize = true;
                 radioButton.Location = new Point(10, 10 + y);
@@ -58,27 +58,6 @@ namespace EzPay
             }
         }
 
-        public string FormatCardNumber(string cardNumber)
-        {
-            StringBuilder formattedNumber = new StringBuilder();
-            for (int i = 0; i < cardNumber.Length; i++)
-            {
-                if (i <= cardNumber.Length - 6)
-                {
-                    formattedNumber.Append('*');
-                    if (i > 0 && i % 4 == 0)
-                    {
-                        formattedNumber.Append(' ');
-                    }
-                }
-                else
-                {
-                    formattedNumber.Append(cardNumber[i]);
-                }
-            }
-            return formattedNumber.ToString();
-        }
-
         private void btn_addcard_Click(object sender, EventArgs e)
         {
             if (nud_amount.Value == 0)
@@ -94,17 +73,27 @@ namespace EzPay
                 var checkBalance = dbcontext.Payments.Where(p => p.CardNumber == SelectedCardNumber).FirstOrDefault();
                 if (checkBalance.Balance < nud_amount.Value)
                 {
-                    MessageBox.Show($"Your Balance is {checkBalance.Balance} you cant add this amount");
-                 
+                    MessageBox.Show($"Your Balance is {checkBalance.Balance}. You can't add this amount.", "⚠️ Deposit Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 }
                 else
                 {
                     var SelectedUser = dbcontext.Users.Where(u => u.UserId == selectedUserId).FirstOrDefault();
                     checkBalance.Balance -= nud_amount.Value;
                     SelectedUser.Balance += nud_amount.Value;
+                    var transaction = new Transaction
+                    {
+                        UserId = selectedUserId,
+                        Amount = nud_amount.Value,
+                        TransactionDate = DateTime.Now,
+                        TransactionType = "Deposit",
+                        TransactionStatus = "Success"
+                    };
+                    dbcontext.Transactions.Add(transaction);
                     dbcontext.SaveChanges();
-                    MessageBox.Show($"You have successfully deposited ${nud_amount.Value}");
-                    userForm.CheckBalance(selectedUserId);
+                    MessageBox.Show($"${nud_amount.Value} added to your balance.\nNew Balance: ${SelectedUser.Balance}", "✔️ Deposit Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    userForm.CheckBalance();
+                    userForm.getTransactions();
                     Close();
 
                 }

@@ -55,6 +55,43 @@ namespace EzPay.Migrations
                     b.ToTable("Payments");
                 });
 
+            modelBuilder.Entity("EzPay.Models.Transaction", b =>
+                {
+                    b.Property<int>("TransactionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactionId"));
+
+                    b.Property<decimal>("Amount")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("decimal(18,2)")
+                        .HasDefaultValueSql("0");
+
+                    b.Property<int>("ReceiverId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("TransactionDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("TransactionStatus")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TransactionType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("TransactionId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Transactions");
+                });
+
             modelBuilder.Entity("EzPay.Models.User", b =>
                 {
                     b.Property<int>("UserId")
@@ -114,9 +151,22 @@ namespace EzPay.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("EzPay.Models.Transaction", b =>
+                {
+                    b.HasOne("EzPay.Models.User", "User")
+                        .WithMany("Transactions")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("EzPay.Models.User", b =>
                 {
                     b.Navigation("Payments");
+
+                    b.Navigation("Transactions");
                 });
 #pragma warning restore 612, 618
         }

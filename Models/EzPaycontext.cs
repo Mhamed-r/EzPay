@@ -14,6 +14,8 @@ namespace EzPay.Models
         public DbSet<User> Users { get; set; }
 
         public DbSet<Payment> Payments { get; set; }
+
+        public DbSet<Transaction> Transactions { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseLazyLoadingProxies().UseSqlServer("Server=desktop-gtd3iip\\sqlexpress;Database=EzPay;Trusted_Connection=True; TrustServerCertificate=True;");
@@ -28,6 +30,9 @@ namespace EzPay.Models
             modelBuilder.Entity<Payment>()
               .Property(P => P.Balance)
               .HasDefaultValueSql("0");
+            modelBuilder.Entity<Transaction>()
+                .Property(T => T.Amount)
+                .HasDefaultValueSql("0");
         }
     }
 }

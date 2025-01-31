@@ -18,33 +18,39 @@ namespace EzPay
         SqlConnection con;
         EzPaycontext dbcontext;
         int userId;
-        public UserForm(int id, string name, string Email, string Phone, string password, decimal Balance)
+        public UserForm(int id, string name, string Email, string Phone, string password)
         {
             InitializeComponent();
             userId = id;
             con = new SqlConnection("Server=desktop-gtd3iip\\sqlexpress;Database=EzPay;Trusted_Connection=True;TrustServerCertificate=True");
-            Hello(id, name, Balance);
+            Hello(name);
             dbcontext = new EzPaycontext();
-            dgv_recenttransactions.DataSource = dbcontext.Users.ToList();
         }
 
         private void UserForm_Load(object sender, EventArgs e)
         {
+            getTransactions();
 
         }
-        public void Hello(int id, string name, decimal Balance)
+        public void getTransactions()
+        {
+            var Load_Transactions = dbcontext.Transactions.Where(T => T.UserId == userId).Select(T => new { T.TransactionType, T.Amount, T.TransactionDate, T.TransactionStatus }).OrderByDescending(T => T.TransactionDate).ToList();
+            dgv_recenttransactions.DataSource = Load_Transactions.ToList();
+
+        }
+        public void Hello(string name)
         {
             lb_username.Text = $"Hello, {name}";
-            CheckBalance(id);
-            Checkcard(id);
+            CheckBalance();
+            Checkcard();
 
         }
-        public void CheckBalance(int id)
+        public void CheckBalance()
         {
             try
             {
                 var query = $"SELECT Balance FROM Users WHERE UserId = @UserId";
-                User selectUser = con.Query<User>(query, new { UserId = id }).FirstOrDefault();
+                User selectUser = con.Query<User>(query, new { UserId = userId }).FirstOrDefault();
                 if (selectUser != null)
                 {
                     lb_balance.Text = selectUser.Balance.ToString();
@@ -52,16 +58,16 @@ namespace EzPay
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred: {ex.Message}");
+                MessageBox.Show($"An error occurred: {ex.Message}", "⚠️ Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void Checkcard(int id)
+        public void Checkcard()
         {
 
             try
             {
                 var query = $"SELECT CardHolderName, CardNumber, ExpiryDate FROM Payments WHERE UserId = @UserId";
-                Payment selectPayment = con.Query<Payment>(query, new { UserId = id }).FirstOrDefault();
+                Payment selectPayment = con.Query<Payment>(query, new { UserId = userId }).FirstOrDefault();
                 if (selectPayment != null)
                 {
                     btn_addcreditcard.Visible = false;
@@ -79,7 +85,8 @@ namespace EzPay
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred: {ex.Message}");
+                MessageBox.Show($"An error occurred: {ex.Message}", "⚠️ Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
         public string FormatCardNumber(string cardNumber)
@@ -100,17 +107,6 @@ namespace EzPay
                     formattedNumber.Append(cardNumber[i]);
                 }
             }
-            //for (int i = 0; i < cardNumber.Length; i++)
-            //{
-            //    if (i > 0 && i % 4 == 0)
-            //    {
-            //        formattedNumber.Append(' ');
-            //    }
-            //    formattedNumber.Append(cardNumber[i]);
-            //}
-
-
-
             return formattedNumber.ToString();
         }
 
@@ -134,6 +130,13 @@ namespace EzPay
         {
             Deposit deposit = new Deposit(userId, this);
             deposit.Show();
+        }
+
+        private void btn_transfer_Click(object sender, EventArgs e)
+        {
+            Transfer transfer = new Transfer(userId, this);
+            transfer.Show();
+
         }
     }
 }

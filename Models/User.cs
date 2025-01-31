@@ -40,7 +40,7 @@ namespace EzPay.Models
         public virtual List<Payment> Payments { get; } = new List<Payment>();
 
 
-        //public ICollection<Transaction> Transactions { get; set; }
+        public virtual List<Transaction> Transactions { get; } = new List<Transaction>();
 
         //public ICollection<Subscription> Subscriptions { get; set; }
 

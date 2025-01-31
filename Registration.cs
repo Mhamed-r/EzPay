@@ -126,26 +126,30 @@ namespace EzPay
         {
             if (txt_username.Text == "" || txt_email.Text == "" || txt_phone.Text == "" || txt_password.Text == "")
             {
-                MessageBox.Show("Please fill all the fields");
+                MessageBox.Show("Please fill all the fields.", "⚠️ Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
 
             }
             else if (txt_password.Text.Length < 8)
             {
-                MessageBox.Show("Password must be at least 8 characters");
-
+                MessageBox.Show("Password must be at least 8 characters.", "⚠️ Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
             }
             else if (txt_phone.Text.Length < 10 || !txt_phone.Text.All(char.IsDigit))
             {
-                MessageBox.Show("Phone number must be at least 10 numbers");
+                MessageBox.Show("Phone number must be at least 10 digits.", "⚠️ Invalid Phone Number", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
             else if (Regex.IsMatch(txt_email.Text, @"^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$")==false)
             {
-                MessageBox.Show("Invalid Email Address");
+                MessageBox.Show("Invalid Email Address.", "⚠️ Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
 
             }
             else if (txt_password.Text != txt_confirmpass.Text)
             {
-                MessageBox.Show("Password and Confirm Password does not match");
+                MessageBox.Show("Password and Confirm Password do not match.", "⚠️ Password Mismatch", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
 
             }
             else
@@ -164,7 +168,8 @@ namespace EzPay
                     };
                     dbcontext.Users.Add(user);
                     dbcontext.SaveChanges();
-                    MessageBox.Show($"User {txt_username.Text} Registered Successfully");
+                    MessageBox.Show($"User {txt_username.Text} registered successfully.", "✔️ Registration Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     btn_clear_Click(null, null);
                 }
                 catch (Exception ex)

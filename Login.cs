@@ -42,7 +42,8 @@ namespace EzPay
         {
             if (txt_email.Text == "" || txt_password.Text == "")
             {
-                MessageBox.Show("Please fill all the fields");
+                MessageBox.Show("Please fill all the fields.", "⚠️ Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
             else
             {
@@ -52,18 +53,20 @@ namespace EzPay
                     User SelectedUser = con.Query<User>(query, new { email=txt_email.Text, password=txt_password.Text }).FirstOrDefault();
                     if (SelectedUser == null)
                     {
-                        MessageBox.Show("Invalid Email or Password");
+                        MessageBox.Show("Invalid Email or Password.", "⚠️ Authentication Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                     }
                     else if (SelectedUser.Role == "User")
                     {
-                        MessageBox.Show($"Welcome {SelectedUser.Name} Login As {SelectedUser.Role}");
-                        UserForm newUser = new UserForm(SelectedUser.UserId, SelectedUser.Name, SelectedUser.Email, SelectedUser.Phone, SelectedUser.Password, (decimal)SelectedUser.Balance);
+                        MessageBox.Show($"Welcome {SelectedUser.Name}. Logged in as {SelectedUser.Role}.", "✔️ Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        UserForm newUser = new UserForm(SelectedUser.UserId, SelectedUser.Name, SelectedUser.Email, SelectedUser.Phone, SelectedUser.Password);
                         newUser.Show();
                         this.Hide();
                     }
                     else if (SelectedUser.Role == "Admin")
                     {
-                        MessageBox.Show($"Welcome {SelectedUser.Name} Login As {SelectedUser.Role}");
+                        MessageBox.Show($"Welcome {SelectedUser.Name}. Logged in as {SelectedUser.Role}.", "✔️ Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Admin newAdmin = new Admin();
                         newAdmin.Show();
                         this.Hide();

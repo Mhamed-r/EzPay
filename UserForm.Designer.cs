@@ -62,7 +62,7 @@
             guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             label7 = new Label();
             label5 = new Label();
-            guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
+            btn_transfer = new Guna.UI2.WinForms.Guna2ImageButton();
             btn_deposit = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             lb_balance = new Label();
@@ -215,7 +215,7 @@
             guna2CustomGradientPanel3.BorderRadius = 25;
             guna2CustomGradientPanel3.Controls.Add(label7);
             guna2CustomGradientPanel3.Controls.Add(label5);
-            guna2CustomGradientPanel3.Controls.Add(guna2ImageButton3);
+            guna2CustomGradientPanel3.Controls.Add(btn_transfer);
             guna2CustomGradientPanel3.Controls.Add(btn_deposit);
             guna2CustomGradientPanel3.CustomizableEdges = customizableEdges7;
             guna2CustomGradientPanel3.Location = new Point(180, 410);
@@ -246,21 +246,22 @@
             label5.TabIndex = 16;
             label5.Text = "Add Money";
             // 
-            // guna2ImageButton3
+            // btn_transfer
             // 
-            guna2ImageButton3.BackColor = Color.Transparent;
-            guna2ImageButton3.CheckedState.ImageSize = new Size(64, 64);
-            guna2ImageButton3.Cursor = Cursors.Hand;
-            guna2ImageButton3.HoverState.ImageSize = new Size(64, 64);
-            guna2ImageButton3.Image = (Image)resources.GetObject("guna2ImageButton3.Image");
-            guna2ImageButton3.ImageOffset = new Point(0, 0);
-            guna2ImageButton3.ImageRotate = 0F;
-            guna2ImageButton3.Location = new Point(207, 4);
-            guna2ImageButton3.Name = "guna2ImageButton3";
-            guna2ImageButton3.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton3.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            guna2ImageButton3.Size = new Size(101, 72);
-            guna2ImageButton3.TabIndex = 12;
+            btn_transfer.BackColor = Color.Transparent;
+            btn_transfer.CheckedState.ImageSize = new Size(64, 64);
+            btn_transfer.Cursor = Cursors.Hand;
+            btn_transfer.HoverState.ImageSize = new Size(64, 64);
+            btn_transfer.Image = (Image)resources.GetObject("btn_transfer.Image");
+            btn_transfer.ImageOffset = new Point(0, 0);
+            btn_transfer.ImageRotate = 0F;
+            btn_transfer.Location = new Point(207, 4);
+            btn_transfer.Name = "btn_transfer";
+            btn_transfer.PressedState.ImageSize = new Size(64, 64);
+            btn_transfer.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            btn_transfer.Size = new Size(101, 72);
+            btn_transfer.TabIndex = 12;
+            btn_transfer.Click += btn_transfer_Click;
             // 
             // btn_deposit
             // 
@@ -521,7 +522,7 @@
         private Label lb_cardnumber;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
         private Guna.UI2.WinForms.Guna2ImageButton btn_deposit;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_transfer;
         private Label label7;
         private Label label5;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;

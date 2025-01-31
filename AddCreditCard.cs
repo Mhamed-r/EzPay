@@ -30,40 +30,51 @@ namespace EzPay
         {
             if (txt_cardholdername.Text == "" || txt_cardnumber.Text == "" || txt_expdate.Text == "")
             {
-                MessageBox.Show("Please fill in all fields");
-                txt_cardholdername.BackColor = Color.Red;
-                txt_cardnumber.BackColor = Color.Red;
-                txt_expdate.BackColor = Color.Red;
-                txt_cvv.BackColor = Color.Red;
+                MessageBox.Show("Please fill in all fields.", "⚠️ Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_cardholdername.BorderColor = Color.Red;
+                txt_cardnumber.BorderColor = Color.Red;
+                txt_expdate.BorderColor = Color.Red;
+                txt_cvv.BorderColor = Color.Red;
             }
             else if (txt_cardnumber.Text.Length != 16)
             {
-                MessageBox.Show("Card number must be 16 digits");
-            } else if (txt_expdate.Text.Length !=5)
+                MessageBox.Show("Card number must be 16 digits.", "⚠️ Invalid Card Number", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else if (txt_expdate.Text.Length !=5)
             {
-                MessageBox.Show("Expiry date must be in MM/YY format");
-            } else if (!txt_cardholdername.Text.All(char.IsLetter))
+                MessageBox.Show("Expiry date must be in MM/YY format.", "⚠️ Invalid Expiry Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else if (!txt_cardholdername.Text.All(char.IsLetter))
             {
-                MessageBox.Show("Card holder name must be letters only");
-            } else if (!txt_cardnumber.Text.All(char.IsDigit))
+                MessageBox.Show("Card holder name must be letters only.", "⚠️ Invalid Card Holder Name", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else if (!txt_cardnumber.Text.All(char.IsDigit))
             {
-                MessageBox.Show("Card number must be numbers only");
+                MessageBox.Show("Card number must be numbers only.", "⚠️ Invalid Card Number", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
             else if (Regex.IsMatch(txt_expdate.Text, @"^(0[1-9]|1[0-2])\/([0-9]{2})$")==false)
             {
-                MessageBox.Show("Expiry date must be in MM/YY format");
+                MessageBox.Show("Expiry date must be in MM/YY format.", "⚠️ Invalid Expiry Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
             else if (DateTime.Parse($"01/{txt_expdate.Text}") < DateTime.Now)
             {
-                MessageBox.Show("Expiry date must be in the future");
-            } else if (dbcontext.Payments.Any(p => p.CardNumber == long.Parse(txt_cardnumber.Text)))
+                MessageBox.Show("Expiry date must be in the future.", "⚠️ Invalid Expiry Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else if (dbcontext.Payments.Any(p => p.CardNumber == long.Parse(txt_cardnumber.Text)))
             {
-                MessageBox.Show("Card number already exists");
+                MessageBox.Show("Card number already exists.", "⚠️ Duplicate Card Number", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
             else
             {
-                //try
-                //{
+                try
+                {
                     Payment payment = new Payment
                     {
                         CardHolderName = txt_cardholdername.Text,
@@ -74,17 +85,18 @@ namespace EzPay
                     };
                     dbcontext.Payments.Add(payment);
                     dbcontext.SaveChanges();
-                    MessageBox.Show("Card added successfully");
-                    userForm.Checkcard(SelectedUserId);
+                    MessageBox.Show("Card added successfully.", "✔️ Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    userForm.Checkcard();
                     this.Close();
 
 
-                //}
-                //catch (Exception ex)
-                //{
-                //    MessageBox.Show(ex.Message);
-                //}
-                }        
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}", "⚠️ Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }        
 
 
         }
