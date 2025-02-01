@@ -100,6 +100,7 @@
             btn_cancel.Size = new Size(193, 50);
             btn_cancel.TabIndex = 92;
             btn_cancel.Text = "Cancel";
+            btn_cancel.Click += btn_cancel_Click;
             // 
             // btn_send
             // 
@@ -150,11 +151,11 @@
             guna2PictureBox1.CustomizableEdges = customizableEdges7;
             guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(82, 23);
+            guna2PictureBox1.Location = new Point(69, 23);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2PictureBox1.Size = new Size(376, 186);
-            guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            guna2PictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             guna2PictureBox1.TabIndex = 87;
             guna2PictureBox1.TabStop = false;
             // 
@@ -176,9 +177,8 @@
             lb_balance.Font = new Font("Nirmala UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lb_balance.Location = new Point(144, 421);
             lb_balance.Name = "lb_balance";
-            lb_balance.Size = new Size(66, 31);
+            lb_balance.Size = new Size(0, 31);
             lb_balance.TabIndex = 95;
-            lb_balance.Text = "$500";
             // 
             // label3
             // 
@@ -208,7 +208,7 @@
             txt_receivername.Margin = new Padding(3, 4, 3, 4);
             txt_receivername.Name = "txt_receivername";
             txt_receivername.PasswordChar = '\0';
-            txt_receivername.PlaceholderText = "123";
+            txt_receivername.PlaceholderText = "e.g. Mohamed Reda";
             txt_receivername.SelectedText = "";
             txt_receivername.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txt_receivername.Size = new Size(227, 35);
@@ -231,7 +231,7 @@
             txt_receiveremail.Margin = new Padding(3, 4, 3, 4);
             txt_receiveremail.Name = "txt_receiveremail";
             txt_receiveremail.PasswordChar = '\0';
-            txt_receiveremail.PlaceholderText = "123";
+            txt_receiveremail.PlaceholderText = "e.g. Mohamed@gmail.com";
             txt_receiveremail.SelectedText = "";
             txt_receiveremail.ShadowDecoration.CustomizableEdges = customizableEdges12;
             txt_receiveremail.Size = new Size(227, 35);

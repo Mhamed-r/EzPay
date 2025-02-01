@@ -28,15 +28,15 @@ namespace EzPay
             userForm = form;
 
             getCreditCard();
-            
+
         }
         private void getCreditCard()
         {
             int y = 0;
-            var Load_Payments=dbcontext.Payments.Where(P=>P.UserId== selectedUserId).ToList();
+            var Load_Payments = dbcontext.Payments.Where(P => P.UserId == selectedUserId).ToList();
             foreach (var item in Load_Payments)
             {
-                RadioButton radioButton= new RadioButton();
+                RadioButton radioButton = new RadioButton();
                 radioButton.Text = $"Linked Card {userForm.FormatCardNumber(item.CardNumber.ToString())}";
                 radioButton.Tag = item.CardNumber;
                 radioButton.AutoSize = true;
@@ -97,8 +97,13 @@ namespace EzPay
                     Close();
 
                 }
-               
+
             }
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
