@@ -18,13 +18,16 @@ namespace EzPay
         SqlConnection con;
         EzPaycontext dbcontext;
         int userId;
-        public UserForm(int id, string name, string Email, string Phone, string password)
+        public UserForm(int id)
         {
             InitializeComponent();
             userId = id;
             con = new SqlConnection("Server=desktop-gtd3iip\\sqlexpress;Database=EzPay;Trusted_Connection=True;TrustServerCertificate=True");
-            Hello(name);
             dbcontext = new EzPaycontext();
+            string name = dbcontext.Users.Where(U => U.UserId == id).Select(U => U.Name).FirstOrDefault();
+            Hello(name);
+
+
         }
 
         private void UserForm_Load(object sender, EventArgs e)
@@ -120,7 +123,7 @@ namespace EzPay
 
         private void btn_addcreditcard_Click(object sender, EventArgs e)
         {
-            AddCreditCard addCreditCard = new AddCreditCard(userId, this);
+            AddCreditCard addCreditCard = new AddCreditCard(userId);
             addCreditCard.Show();
 
 
@@ -138,5 +141,25 @@ namespace EzPay
             transfer.Show();
 
         }
+
+        private void btn_setting_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Profile profile = new Profile(userId);
+            profile.ShowDialog();
+
+            if (profile.rowAffected > 0)
+            {
+
+                this.Close();
+                Login login = new Login();
+                login.Show();
+
+            }
+            else
+            {
+                this.Show();
+            }
+            }
     }
 }

@@ -70,8 +70,13 @@ namespace EzPay
             }
             else
             {
-                var checkBalance = dbcontext.Payments.Where(p => p.CardNumber == SelectedCardNumber).FirstOrDefault();
-                if (checkBalance.Balance < nud_amount.Value)
+                Payment checkBalance = dbcontext.Payments.Where(p => p.CardNumber == SelectedCardNumber).FirstOrDefault();
+                if (checkBalance == null) {
+                    MessageBox.Show($"Add Payment ", "⚠️ Deposit Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+
+                }
+                else if (checkBalance.Balance < nud_amount.Value)
                 {
                     MessageBox.Show($"Your Balance is {checkBalance.Balance}. You can't add this amount.", "⚠️ Deposit Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
@@ -97,6 +102,7 @@ namespace EzPay
                     Close();
 
                 }
+
 
             }
         }

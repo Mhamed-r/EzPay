@@ -35,8 +35,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             btn_close = new Button();
             label7 = new Label();
@@ -49,12 +47,10 @@
             txt_email = new TextBox();
             label2 = new Label();
             txt_confirmpass = new TextBox();
-            cb_code = new Guna.UI2.WinForms.Guna2ComboBox();
             txt_phone = new TextBox();
             label5 = new Label();
             btn_back = new Button();
             label9 = new Label();
-            btn_reset = new Button();
             btn_register = new Guna.UI2.WinForms.Guna2GradientButton();
             btn_clear = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
@@ -106,7 +102,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.ForeColor = Color.FromArgb(164, 165, 196);
+            label1.ForeColor = Color.Black;
             label1.Location = new Point(639, 58);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
@@ -142,7 +138,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.ForeColor = Color.FromArgb(164, 165, 196);
+            label4.ForeColor = Color.Black;
             label4.Location = new Point(639, 128);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
@@ -153,7 +149,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.ForeColor = Color.FromArgb(164, 165, 196);
+            label3.ForeColor = Color.Black;
             label3.Location = new Point(639, 266);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
@@ -189,7 +185,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.ForeColor = Color.FromArgb(164, 165, 196);
+            label2.ForeColor = Color.Black;
             label2.Location = new Point(639, 337);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
@@ -210,43 +206,22 @@
             txt_confirmpass.Size = new Size(279, 41);
             txt_confirmpass.TabIndex = 31;
             // 
-            // cb_code
-            // 
-            cb_code.BackColor = Color.Transparent;
-            cb_code.CustomizableEdges = customizableEdges3;
-            cb_code.DrawMode = DrawMode.OwnerDrawFixed;
-            cb_code.DropDownHeight = 250;
-            cb_code.DropDownStyle = ComboBoxStyle.DropDownList;
-            cb_code.DropDownWidth = 300;
-            cb_code.FillColor = Color.FromArgb(230, 231, 233);
-            cb_code.FocusedColor = Color.FromArgb(94, 148, 255);
-            cb_code.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cb_code.Font = new Font("MS UI Gothic", 13.8F);
-            cb_code.ForeColor = Color.FromArgb(68, 88, 112);
-            cb_code.IntegralHeight = false;
-            cb_code.ItemHeight = 30;
-            cb_code.Location = new Point(641, 224);
-            cb_code.Name = "cb_code";
-            cb_code.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            cb_code.Size = new Size(68, 36);
-            cb_code.TabIndex = 33;
-            // 
             // txt_phone
             // 
             txt_phone.BackColor = Color.FromArgb(230, 231, 233);
             txt_phone.BorderStyle = BorderStyle.None;
             txt_phone.Font = new Font("MS UI Gothic", 13.8F);
-            txt_phone.Location = new Point(716, 224);
+            txt_phone.Location = new Point(639, 224);
             txt_phone.Margin = new Padding(4, 3, 4, 3);
             txt_phone.Multiline = true;
             txt_phone.Name = "txt_phone";
-            txt_phone.Size = new Size(202, 36);
+            txt_phone.Size = new Size(279, 41);
             txt_phone.TabIndex = 34;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.ForeColor = Color.FromArgb(164, 165, 196);
+            label5.ForeColor = Color.Black;
             label5.Location = new Point(638, 201);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
@@ -281,24 +256,10 @@
             label9.TabIndex = 38;
             label9.Text = "Already Have an Account";
             // 
-            // btn_reset
-            // 
-            btn_reset.BackColor = Color.White;
-            btn_reset.Cursor = Cursors.Hand;
-            btn_reset.FlatStyle = FlatStyle.Flat;
-            btn_reset.ForeColor = Color.FromArgb(116, 86, 174);
-            btn_reset.Location = new Point(670, 497);
-            btn_reset.Margin = new Padding(4, 3, 4, 3);
-            btn_reset.Name = "btn_reset";
-            btn_reset.Size = new Size(221, 47);
-            btn_reset.TabIndex = 37;
-            btn_reset.Text = "CLEAR";
-            btn_reset.UseVisualStyleBackColor = false;
-            // 
             // btn_register
             // 
             btn_register.BorderRadius = 9;
-            btn_register.CustomizableEdges = customizableEdges5;
+            btn_register.CustomizableEdges = customizableEdges3;
             btn_register.DisabledState.BorderColor = Color.DarkGray;
             btn_register.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_register.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -310,7 +271,7 @@
             btn_register.ForeColor = Color.White;
             btn_register.Location = new Point(670, 443);
             btn_register.Name = "btn_register";
-            btn_register.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btn_register.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btn_register.Size = new Size(221, 47);
             btn_register.TabIndex = 40;
             btn_register.Text = "REGISTER";
@@ -322,7 +283,7 @@
             btn_clear.BorderColor = Color.FromArgb(61, 162, 166);
             btn_clear.BorderRadius = 9;
             btn_clear.BorderThickness = 1;
-            btn_clear.CustomizableEdges = customizableEdges7;
+            btn_clear.CustomizableEdges = customizableEdges5;
             btn_clear.DisabledState.BorderColor = Color.DarkGray;
             btn_clear.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_clear.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -332,9 +293,9 @@
             btn_clear.FillColor2 = Color.White;
             btn_clear.Font = new Font("Segoe UI", 9F);
             btn_clear.ForeColor = Color.FromArgb(92, 177, 159);
-            btn_clear.Location = new Point(670, 497);
+            btn_clear.Location = new Point(670, 496);
             btn_clear.Name = "btn_clear";
-            btn_clear.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btn_clear.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btn_clear.Size = new Size(221, 47);
             btn_clear.TabIndex = 41;
             btn_clear.Text = "CLEAR";
@@ -350,10 +311,8 @@
             Controls.Add(btn_register);
             Controls.Add(btn_back);
             Controls.Add(label9);
-            Controls.Add(btn_reset);
             Controls.Add(label5);
             Controls.Add(txt_phone);
-            Controls.Add(cb_code);
             Controls.Add(label2);
             Controls.Add(txt_confirmpass);
             Controls.Add(cb_show);
@@ -389,12 +348,10 @@
         private TextBox txt_email;
         private Label label2;
         private TextBox txt_confirmpass;
-        private Guna.UI2.WinForms.Guna2ComboBox cb_code;
         private TextBox txt_phone;
         private Label label5;
         private Button btn_back;
         private Label label9;
-        private Button btn_reset;
         private Guna.UI2.WinForms.Guna2GradientButton btn_register;
         private Guna.UI2.WinForms.Guna2GradientButton btn_clear;
     }

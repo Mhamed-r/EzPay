@@ -60,14 +60,14 @@ namespace EzPay
                     {
                         MessageBox.Show($"Welcome {SelectedUser.Name}. Logged in as {SelectedUser.Role}.", "✔️ Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        UserForm newUser = new UserForm(SelectedUser.UserId, SelectedUser.Name, SelectedUser.Email, SelectedUser.Phone, SelectedUser.Password);
+                        UserForm newUser = new UserForm(SelectedUser.UserId);
                         newUser.Show();
                         this.Hide();
                     }
                     else if (SelectedUser.Role == "Admin")
                     {
                         MessageBox.Show($"Welcome {SelectedUser.Name}. Logged in as {SelectedUser.Role}.", "✔️ Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Admin newAdmin = new Admin();
+                        Admin newAdmin = new Admin(SelectedUser.UserId);
                         newAdmin.Show();
                         this.Hide();
                     }

@@ -39,30 +39,31 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            lb_totaltransactions = new Label();
+            lb_totalusers = new Label();
+            label9 = new Label();
             btn_logout = new Guna.UI2.WinForms.Guna2ImageButton();
             btn_setting = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             lb_username = new Label();
+            label2 = new Label();
             dgv_showdata = new Guna.UI2.WinForms.Guna2DataGridView();
             label8 = new Label();
             guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            label3 = new Label();
-            btn_register = new Guna.UI2.WinForms.Guna2ImageButton();
+            guna2CustomGradientPanel6 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             label4 = new Label();
             label6 = new Label();
             btn_transfer = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -74,13 +75,12 @@
             label5 = new Label();
             btn_totalbalance = new Guna.UI2.WinForms.Guna2ImageButton();
             btn_totalusers = new Guna.UI2.WinForms.Guna2ImageButton();
-            label2 = new Label();
             guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgv_showdata).BeginInit();
             guna2CustomGradientPanel4.SuspendLayout();
             guna2CustomGradientPanel1.SuspendLayout();
-            guna2CustomGradientPanel5.SuspendLayout();
+            guna2CustomGradientPanel6.SuspendLayout();
             guna2CustomGradientPanel3.SuspendLayout();
             SuspendLayout();
             // 
@@ -89,6 +89,9 @@
             guna2CustomGradientPanel2.BackColor = Color.Transparent;
             guna2CustomGradientPanel2.BorderColor = Color.White;
             guna2CustomGradientPanel2.BorderRadius = 25;
+            guna2CustomGradientPanel2.Controls.Add(lb_totaltransactions);
+            guna2CustomGradientPanel2.Controls.Add(lb_totalusers);
+            guna2CustomGradientPanel2.Controls.Add(label9);
             guna2CustomGradientPanel2.Controls.Add(btn_logout);
             guna2CustomGradientPanel2.Controls.Add(btn_setting);
             guna2CustomGradientPanel2.Controls.Add(guna2CirclePictureBox1);
@@ -100,6 +103,37 @@
             guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges5;
             guna2CustomGradientPanel2.Size = new Size(538, 123);
             guna2CustomGradientPanel2.TabIndex = 13;
+            // 
+            // lb_totaltransactions
+            // 
+            lb_totaltransactions.AutoSize = true;
+            lb_totaltransactions.BackColor = Color.Transparent;
+            lb_totaltransactions.Font = new Font("Nirmala UI", 16.2F, FontStyle.Bold);
+            lb_totaltransactions.Location = new Point(280, 71);
+            lb_totaltransactions.Name = "lb_totaltransactions";
+            lb_totaltransactions.Size = new Size(0, 38);
+            lb_totaltransactions.TabIndex = 12;
+            // 
+            // lb_totalusers
+            // 
+            lb_totalusers.AutoSize = true;
+            lb_totalusers.BackColor = Color.Transparent;
+            lb_totalusers.Font = new Font("Nirmala UI", 16.2F, FontStyle.Bold);
+            lb_totalusers.Location = new Point(158, 71);
+            lb_totalusers.Name = "lb_totalusers";
+            lb_totalusers.Size = new Size(0, 38);
+            lb_totalusers.TabIndex = 11;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
+            label9.Font = new Font("Microsoft JhengHei UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(229, 46);
+            label9.Name = "label9";
+            label9.Size = new Size(153, 22);
+            label9.TabIndex = 10;
+            label9.Text = "Total Transactions";
             // 
             // btn_logout
             // 
@@ -116,6 +150,7 @@
             btn_logout.ShadowDecoration.CustomizableEdges = customizableEdges1;
             btn_logout.Size = new Size(58, 60);
             btn_logout.TabIndex = 9;
+            btn_logout.Click += btn_logout_Click;
             // 
             // btn_setting
             // 
@@ -132,6 +167,7 @@
             btn_setting.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btn_setting.Size = new Size(55, 56);
             btn_setting.TabIndex = 8;
+            btn_setting.Click += btn_setting_Click;
             // 
             // guna2CirclePictureBox1
             // 
@@ -156,6 +192,17 @@
             lb_username.Name = "lb_username";
             lb_username.Size = new Size(0, 28);
             lb_username.TabIndex = 0;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Microsoft JhengHei UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(129, 46);
+            label2.Name = "label2";
+            label2.Size = new Size(99, 22);
+            label2.TabIndex = 4;
+            label2.Text = "Total Users";
             // 
             // dgv_showdata
             // 
@@ -239,76 +286,46 @@
             // guna2CustomGradientPanel1
             // 
             guna2CustomGradientPanel1.BackColor = Color.Black;
-            guna2CustomGradientPanel1.Controls.Add(guna2CustomGradientPanel5);
+            guna2CustomGradientPanel1.Controls.Add(guna2CustomGradientPanel6);
             guna2CustomGradientPanel1.Controls.Add(guna2CustomGradientPanel3);
             guna2CustomGradientPanel1.Controls.Add(guna2CustomGradientPanel4);
             guna2CustomGradientPanel1.Controls.Add(guna2CustomGradientPanel2);
-            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges18;
+            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges17;
             guna2CustomGradientPanel1.FillColor = Color.FromArgb(198, 227, 137);
             guna2CustomGradientPanel1.FillColor2 = Color.FromArgb(61, 162, 166);
             guna2CustomGradientPanel1.FillColor3 = Color.FromArgb(198, 227, 137);
             guna2CustomGradientPanel1.FillColor4 = Color.FromArgb(61, 162, 166);
             guna2CustomGradientPanel1.Location = new Point(0, 0);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges18;
             guna2CustomGradientPanel1.Size = new Size(754, 880);
             guna2CustomGradientPanel1.TabIndex = 1;
             // 
-            // guna2CustomGradientPanel5
+            // guna2CustomGradientPanel6
             // 
-            guna2CustomGradientPanel5.BackColor = Color.Transparent;
-            guna2CustomGradientPanel5.BorderColor = Color.White;
-            guna2CustomGradientPanel5.BorderRadius = 25;
-            guna2CustomGradientPanel5.Controls.Add(label3);
-            guna2CustomGradientPanel5.Controls.Add(btn_register);
-            guna2CustomGradientPanel5.Controls.Add(label4);
-            guna2CustomGradientPanel5.Controls.Add(label6);
-            guna2CustomGradientPanel5.Controls.Add(btn_transfer);
-            guna2CustomGradientPanel5.Controls.Add(btn_deposit);
-            guna2CustomGradientPanel5.CustomizableEdges = customizableEdges11;
-            guna2CustomGradientPanel5.Location = new Point(97, 359);
-            guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
-            guna2CustomGradientPanel5.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2CustomGradientPanel5.Size = new Size(517, 103);
-            guna2CustomGradientPanel5.TabIndex = 21;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Microsoft JhengHei UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(368, 70);
-            label3.Name = "label3";
-            label3.Size = new Size(79, 22);
-            label3.TabIndex = 20;
-            label3.Text = "Register";
-            // 
-            // btn_register
-            // 
-            btn_register.BackColor = Color.Transparent;
-            btn_register.CheckedState.ImageSize = new Size(64, 64);
-            btn_register.Cursor = Cursors.Hand;
-            btn_register.HoverState.ImageSize = new Size(64, 64);
-            btn_register.Image = (Image)resources.GetObject("btn_register.Image");
-            btn_register.ImageOffset = new Point(0, 0);
-            btn_register.ImageRotate = 0F;
-            btn_register.Location = new Point(357, 4);
-            btn_register.Name = "btn_register";
-            btn_register.PressedState.ImageSize = new Size(64, 64);
-            btn_register.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btn_register.Size = new Size(101, 72);
-            btn_register.TabIndex = 19;
-            btn_register.Click += btn_register_Click;
+            guna2CustomGradientPanel6.BackColor = Color.Transparent;
+            guna2CustomGradientPanel6.BorderColor = Color.White;
+            guna2CustomGradientPanel6.BorderRadius = 25;
+            guna2CustomGradientPanel6.Controls.Add(label4);
+            guna2CustomGradientPanel6.Controls.Add(label6);
+            guna2CustomGradientPanel6.Controls.Add(btn_transfer);
+            guna2CustomGradientPanel6.Controls.Add(btn_deposit);
+            guna2CustomGradientPanel6.CustomizableEdges = customizableEdges10;
+            guna2CustomGradientPanel6.Location = new Point(180, 344);
+            guna2CustomGradientPanel6.Name = "guna2CustomGradientPanel6";
+            guna2CustomGradientPanel6.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            guna2CustomGradientPanel6.Size = new Size(351, 106);
+            guna2CustomGradientPanel6.TabIndex = 22;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Microsoft JhengHei UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(218, 70);
+            label4.Location = new Point(215, 74);
             label4.Name = "label4";
             label4.Size = new Size(79, 22);
-            label4.TabIndex = 18;
+            label4.TabIndex = 22;
             label4.Text = "Transfer";
             // 
             // label6
@@ -316,10 +333,10 @@
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Microsoft JhengHei UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(61, 72);
+            label6.Location = new Point(58, 76);
             label6.Name = "label6";
             label6.Size = new Size(75, 22);
-            label6.TabIndex = 16;
+            label6.TabIndex = 21;
             label6.Text = "Deposit";
             // 
             // btn_transfer
@@ -331,12 +348,12 @@
             btn_transfer.Image = (Image)resources.GetObject("btn_transfer.Image");
             btn_transfer.ImageOffset = new Point(0, 0);
             btn_transfer.ImageRotate = 0F;
-            btn_transfer.Location = new Point(207, 4);
+            btn_transfer.Location = new Point(204, 8);
             btn_transfer.Name = "btn_transfer";
             btn_transfer.PressedState.ImageSize = new Size(64, 64);
-            btn_transfer.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            btn_transfer.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btn_transfer.Size = new Size(101, 72);
-            btn_transfer.TabIndex = 12;
+            btn_transfer.TabIndex = 20;
             btn_transfer.Click += btn_transfer_Click;
             // 
             // btn_deposit
@@ -348,12 +365,12 @@
             btn_deposit.Image = (Image)resources.GetObject("btn_deposit.Image");
             btn_deposit.ImageOffset = new Point(0, 0);
             btn_deposit.ImageRotate = 0F;
-            btn_deposit.Location = new Point(48, 4);
+            btn_deposit.Location = new Point(45, 8);
             btn_deposit.Name = "btn_deposit";
             btn_deposit.PressedState.ImageSize = new Size(64, 64);
-            btn_deposit.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btn_deposit.ShadowDecoration.CustomizableEdges = customizableEdges9;
             btn_deposit.Size = new Size(101, 72);
-            btn_deposit.TabIndex = 10;
+            btn_deposit.TabIndex = 19;
             btn_deposit.Click += btn_deposit_Click;
             // 
             // guna2CustomGradientPanel3
@@ -367,10 +384,10 @@
             guna2CustomGradientPanel3.Controls.Add(label5);
             guna2CustomGradientPanel3.Controls.Add(btn_totalbalance);
             guna2CustomGradientPanel3.Controls.Add(btn_totalusers);
-            guna2CustomGradientPanel3.CustomizableEdges = customizableEdges16;
+            guna2CustomGradientPanel3.CustomizableEdges = customizableEdges15;
             guna2CustomGradientPanel3.Location = new Point(97, 213);
             guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
-            guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna2CustomGradientPanel3.Size = new Size(517, 103);
             guna2CustomGradientPanel3.TabIndex = 17;
             // 
@@ -397,7 +414,7 @@
             btn_zerocards.Location = new Point(357, 4);
             btn_zerocards.Name = "btn_zerocards";
             btn_zerocards.PressedState.ImageSize = new Size(64, 64);
-            btn_zerocards.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            btn_zerocards.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btn_zerocards.Size = new Size(101, 72);
             btn_zerocards.TabIndex = 19;
             btn_zerocards.Click += btn_zerocards_Click;
@@ -436,7 +453,7 @@
             btn_totalbalance.Location = new Point(207, 4);
             btn_totalbalance.Name = "btn_totalbalance";
             btn_totalbalance.PressedState.ImageSize = new Size(64, 64);
-            btn_totalbalance.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btn_totalbalance.ShadowDecoration.CustomizableEdges = customizableEdges13;
             btn_totalbalance.Size = new Size(101, 72);
             btn_totalbalance.TabIndex = 12;
             btn_totalbalance.Click += btn_totalbalance_Click;
@@ -453,21 +470,10 @@
             btn_totalusers.Location = new Point(48, 4);
             btn_totalusers.Name = "btn_totalusers";
             btn_totalusers.PressedState.ImageSize = new Size(64, 64);
-            btn_totalusers.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            btn_totalusers.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btn_totalusers.Size = new Size(101, 72);
             btn_totalusers.TabIndex = 10;
             btn_totalusers.Click += btn_totalusers_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Microsoft JhengHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(96, 38);
-            label2.Name = "label2";
-            label2.Size = new Size(136, 25);
-            label2.TabIndex = 4;
-            label2.Text = "Total Balance";
             // 
             // Admin
             // 
@@ -487,8 +493,8 @@
             guna2CustomGradientPanel4.ResumeLayout(false);
             guna2CustomGradientPanel4.PerformLayout();
             guna2CustomGradientPanel1.ResumeLayout(false);
-            guna2CustomGradientPanel5.ResumeLayout(false);
-            guna2CustomGradientPanel5.PerformLayout();
+            guna2CustomGradientPanel6.ResumeLayout(false);
+            guna2CustomGradientPanel6.PerformLayout();
             guna2CustomGradientPanel3.ResumeLayout(false);
             guna2CustomGradientPanel3.PerformLayout();
             ResumeLayout(false);
@@ -509,15 +515,16 @@
         private Label label5;
         private Guna.UI2.WinForms.Guna2ImageButton btn_totalbalance;
         private Guna.UI2.WinForms.Guna2ImageButton btn_totalusers;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel5;
-        private Label label3;
-        private Guna.UI2.WinForms.Guna2ImageButton btn_register;
+        private Label label1;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_zerocards;
+        private Label label2;
+        private Label label9;
+        private Label lb_totaltransactions;
+        private Label lb_totalusers;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel6;
         private Label label4;
         private Label label6;
         private Guna.UI2.WinForms.Guna2ImageButton btn_transfer;
         private Guna.UI2.WinForms.Guna2ImageButton btn_deposit;
-        private Label label1;
-        private Guna.UI2.WinForms.Guna2ImageButton btn_zerocards;
-        private Label label2;
     }
 }

@@ -17,13 +17,20 @@ namespace EzPay
         EzPaycontext dbcontext;
         UserForm userForm;
         int SelectedUserId;
-        public AddCreditCard(int userId , UserForm form)
+        //public AddCreditCard(int userId , UserForm form)
+        //{
+        //    InitializeComponent();
+        //    SelectedUserId = userId;
+        //    dbcontext = new EzPaycontext();
+        //    userForm = form;
+
+        //}
+        public AddCreditCard(int userId) 
         {
             InitializeComponent();
             SelectedUserId = userId;
             dbcontext = new EzPaycontext();
-            userForm = form;
-
+            userForm =new UserForm(userId);
         }
 
         private void btn_addcard_Click(object sender, EventArgs e)
@@ -46,7 +53,7 @@ namespace EzPay
                 MessageBox.Show("Expiry date must be in MM/YY format.", "⚠️ Invalid Expiry Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
-            else if (!txt_cardholdername.Text.All(char.IsLetter))
+            else if (Regex.IsMatch(txt_cardholdername.Text, @"(?<! )[-a-zA-Z' ]{2,26}") == false)
             {
                 MessageBox.Show("Card holder name must be letters only.", "⚠️ Invalid Card Holder Name", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
@@ -86,7 +93,9 @@ namespace EzPay
                     dbcontext.Payments.Add(payment);
                     dbcontext.SaveChanges();
                     MessageBox.Show("Card added successfully.", "✔️ Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (userForm != null) { 
                     userForm.Checkcard();
+                    }
                     this.Close();
 
 
