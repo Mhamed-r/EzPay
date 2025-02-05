@@ -17,14 +17,14 @@ namespace EzPay
         EzPaycontext dbcontext;
         UserForm userForm;
         int SelectedUserId;
-        //public AddCreditCard(int userId , UserForm form)
-        //{
-        //    InitializeComponent();
-        //    SelectedUserId = userId;
-        //    dbcontext = new EzPaycontext();
-        //    userForm = form;
+        public AddCreditCard(int userId, UserForm form)
+        {
+            InitializeComponent();
+            SelectedUserId = userId;
+            dbcontext = new EzPaycontext();
+            userForm = form;
 
-        //}
+        }
         public AddCreditCard(int userId) 
         {
             InitializeComponent();
@@ -93,9 +93,9 @@ namespace EzPay
                     dbcontext.Payments.Add(payment);
                     dbcontext.SaveChanges();
                     MessageBox.Show("Card added successfully.", "✔️ Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (userForm != null) { 
+                 
                     userForm.Checkcard();
-                    }
+      
                     this.Close();
 
 

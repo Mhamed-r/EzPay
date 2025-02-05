@@ -34,11 +34,11 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -59,9 +59,8 @@
             guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             lb_username = new Label();
             label2 = new Label();
-            dgv_showdata = new Guna.UI2.WinForms.Guna2DataGridView();
-            label8 = new Label();
             guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            dgv_showdata = new Guna.UI2.WinForms.Guna2DataGridView();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2CustomGradientPanel6 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             label4 = new Label();
@@ -77,8 +76,8 @@
             btn_totalusers = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgv_showdata).BeginInit();
             guna2CustomGradientPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgv_showdata).BeginInit();
             guna2CustomGradientPanel1.SuspendLayout();
             guna2CustomGradientPanel6.SuspendLayout();
             guna2CustomGradientPanel3.SuspendLayout();
@@ -109,7 +108,7 @@
             lb_totaltransactions.AutoSize = true;
             lb_totaltransactions.BackColor = Color.Transparent;
             lb_totaltransactions.Font = new Font("Nirmala UI", 16.2F, FontStyle.Bold);
-            lb_totaltransactions.Location = new Point(280, 71);
+            lb_totaltransactions.Location = new Point(291, 64);
             lb_totaltransactions.Name = "lb_totaltransactions";
             lb_totaltransactions.Size = new Size(0, 38);
             lb_totaltransactions.TabIndex = 12;
@@ -119,7 +118,7 @@
             lb_totalusers.AutoSize = true;
             lb_totalusers.BackColor = Color.Transparent;
             lb_totalusers.Font = new Font("Nirmala UI", 16.2F, FontStyle.Bold);
-            lb_totalusers.Location = new Point(158, 71);
+            lb_totalusers.Location = new Point(169, 64);
             lb_totalusers.Name = "lb_totalusers";
             lb_totalusers.Size = new Size(0, 38);
             lb_totalusers.TabIndex = 11;
@@ -129,7 +128,7 @@
             label9.AutoSize = true;
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Microsoft JhengHei UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(229, 46);
+            label9.Location = new Point(240, 39);
             label9.Name = "label9";
             label9.Size = new Size(153, 22);
             label9.TabIndex = 10;
@@ -198,11 +197,24 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Microsoft JhengHei UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(129, 46);
+            label2.Location = new Point(140, 39);
             label2.Name = "label2";
             label2.Size = new Size(99, 22);
             label2.TabIndex = 4;
             label2.Text = "Total Users";
+            // 
+            // guna2CustomGradientPanel4
+            // 
+            guna2CustomGradientPanel4.BackColor = Color.Transparent;
+            guna2CustomGradientPanel4.BorderColor = Color.Transparent;
+            guna2CustomGradientPanel4.BorderRadius = 30;
+            guna2CustomGradientPanel4.Controls.Add(dgv_showdata);
+            guna2CustomGradientPanel4.CustomizableEdges = customizableEdges6;
+            guna2CustomGradientPanel4.Location = new Point(0, 539);
+            guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
+            guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            guna2CustomGradientPanel4.Size = new Size(751, 336);
+            guna2CustomGradientPanel4.TabIndex = 16;
             // 
             // dgv_showdata
             // 
@@ -213,7 +225,7 @@
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
             dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Black;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgv_showdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -228,14 +240,14 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgv_showdata.DefaultCellStyle = dataGridViewCellStyle3;
             dgv_showdata.GridColor = Color.Black;
-            dgv_showdata.Location = new Point(12, 58);
+            dgv_showdata.Location = new Point(12, 18);
             dgv_showdata.Name = "dgv_showdata";
             dgv_showdata.ReadOnly = true;
             dgv_showdata.RowHeadersVisible = false;
             dgv_showdata.RowHeadersWidth = 51;
             dgv_showdata.RowTemplate.Height = 50;
-            dgv_showdata.Size = new Size(728, 251);
-            dgv_showdata.TabIndex = 54;
+            dgv_showdata.Size = new Size(717, 295);
+            dgv_showdata.TabIndex = 55;
             dgv_showdata.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgv_showdata.ThemeStyle.AlternatingRowsStyle.Font = null;
             dgv_showdata.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
@@ -257,31 +269,6 @@
             dgv_showdata.ThemeStyle.RowsStyle.Height = 50;
             dgv_showdata.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgv_showdata.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.Transparent;
-            label8.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(29, 11);
-            label8.Name = "label8";
-            label8.Size = new Size(200, 28);
-            label8.TabIndex = 1;
-            label8.Text = "Recent Transactions";
-            // 
-            // guna2CustomGradientPanel4
-            // 
-            guna2CustomGradientPanel4.BackColor = Color.Transparent;
-            guna2CustomGradientPanel4.BorderColor = Color.Transparent;
-            guna2CustomGradientPanel4.BorderRadius = 30;
-            guna2CustomGradientPanel4.Controls.Add(dgv_showdata);
-            guna2CustomGradientPanel4.Controls.Add(label8);
-            guna2CustomGradientPanel4.CustomizableEdges = customizableEdges6;
-            guna2CustomGradientPanel4.Location = new Point(0, 539);
-            guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
-            guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            guna2CustomGradientPanel4.Size = new Size(751, 336);
-            guna2CustomGradientPanel4.TabIndex = 16;
             // 
             // guna2CustomGradientPanel1
             // 
@@ -489,9 +476,8 @@
             guna2CustomGradientPanel2.ResumeLayout(false);
             guna2CustomGradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgv_showdata).EndInit();
             guna2CustomGradientPanel4.ResumeLayout(false);
-            guna2CustomGradientPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgv_showdata).EndInit();
             guna2CustomGradientPanel1.ResumeLayout(false);
             guna2CustomGradientPanel6.ResumeLayout(false);
             guna2CustomGradientPanel6.PerformLayout();
@@ -506,8 +492,6 @@
         private Guna.UI2.WinForms.Guna2ImageButton btn_setting;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Label lb_username;
-        private Guna.UI2.WinForms.Guna2DataGridView dgv_showdata;
-        private Label label8;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
@@ -526,5 +510,6 @@
         private Label label6;
         private Guna.UI2.WinForms.Guna2ImageButton btn_transfer;
         private Guna.UI2.WinForms.Guna2ImageButton btn_deposit;
+        private Guna.UI2.WinForms.Guna2DataGridView dgv_showdata;
     }
 }

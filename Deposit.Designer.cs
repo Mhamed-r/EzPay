@@ -78,7 +78,7 @@
             nud_amount.Size = new Size(139, 38);
             nud_amount.TabIndex = 85;
             nud_amount.UpDownButtonFillColor = Color.FromArgb(40, 89, 255);
-            nud_amount.UpDownButtonForeColor = Color.Black;
+            nud_amount.UpDownButtonForeColor = Color.White;
             nud_amount.Value = new decimal(new int[] { 5, 0, 0, 0 });
             // 
             // btn_cancel

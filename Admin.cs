@@ -19,7 +19,11 @@ namespace EzPay
         public Admin(int id)
         {
             InitializeComponent();
-            dbcontext = new EzPaycontext();
+            dgv_showdata.ColumnHeadersDefaultCellStyle.BackColor = Color.Black;
+            dgv_showdata.EnableHeadersVisualStyles = false;
+           
+
+                   dbcontext = new EzPaycontext();
             string name = dbcontext.Users.Where(A => A.UserId == id).Select(A => A.Name).FirstOrDefault();
             lb_username.Text = $"Hello, {name}";
             adminId = id;

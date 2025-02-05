@@ -21,6 +21,9 @@ namespace EzPay
         public UserForm(int id)
         {
             InitializeComponent();
+            dgv_recenttransactions.ColumnHeadersDefaultCellStyle.BackColor = Color.Black;
+            dgv_recenttransactions.EnableHeadersVisualStyles = false;
+
             userId = id;
             con = new SqlConnection("Server=desktop-gtd3iip\\sqlexpress;Database=EzPay;Trusted_Connection=True;TrustServerCertificate=True");
             dbcontext = new EzPaycontext();
@@ -123,7 +126,7 @@ namespace EzPay
 
         private void btn_addcreditcard_Click(object sender, EventArgs e)
         {
-            AddCreditCard addCreditCard = new AddCreditCard(userId);
+            AddCreditCard addCreditCard = new AddCreditCard(userId,this);
             addCreditCard.Show();
 
 
